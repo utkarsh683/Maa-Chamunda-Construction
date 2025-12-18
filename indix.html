@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Chamunda Construction - Building Excellence Since 2010</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B0000; /* Dark red for Chamunda theme */
+            --secondary-color: #FFD700; /* Gold accent */
+            --accent-color: #B22222;
+            --light-color: #f8f9fa;
+            --dark-color: #333;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            display: inline-block;
+            padding-bottom: 15px;
+            position: relative;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Top Banner - Owner Info */
+        .top-banner {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .owner-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .owner-detail {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .owner-detail i {
+            color: var(--secondary-color);
+            margin-right: 5px;
+        }
+        
+        /* Header & Navigation */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .navbar-brand span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin: 0 10px;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--secondary-color);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 150px 0 100px;
+            position: relative;
+        }
+        
+        .hero-content h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+        
+        .owner-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+            border-left: 5px solid var(--secondary-color);
+            backdrop-filter: blur(10px);
+        }
+        
+        .owner-card h4 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .owner-card p {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .owner-card i {
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        .statistics {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px 0;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* About Section */
+        .about-section {
+            background-color: var(--light-color);
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            transform: perspective(1000px) rotateY(-5deg);
+        }
+        
+        .about-img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .feature-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: var(--secondary-color);
+        }
+        
+        /* Services Section */
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 30px;
+            height: 100%;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background-color: var(--light-color);
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            height: 300px;
+            box-shadow: var(--shadow);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(139, 0, 0, 0.85);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--transition);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+        
+        /* Process Section */
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-step:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: var(--secondary-color);
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+        
+        .process-icon {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 40px;
+            color: var(--primary-color);
+            border: 5px solid var(--secondary-color);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Why Choose Us */
+        .benefit-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            text-align: center;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 35px;
+            color: var(--secondary-color);
+        }
+        
+        /* Contact Section */
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-info {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            height: 100%;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary-color);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+            color: var(--primary-color);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Image Modal */
+        .modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .modal-img {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Maa Chamunda Logo Style */
+        .maa-logo {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .maa-logo:before {
+            content: '🛠️';
+            margin-right: 10px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-img {
+                transform: none;
+                margin-bottom: 30px;
+            }
+            
+            .process-step:before {
+                display: none;
+            }
+            
+            .owner-info {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .owner-detail {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .top-banner {
+                font-size: 0.8rem;
+                padding: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner with Owner Information -->
+    <div class="top-banner d-none d-md-block">
+        <div class="container">
+            <div class="owner-info">
+                <div class="owner-detail">
+                    <div><i class="fas fa-user-tie"></i> Owner: <strong>Prajapati Darshan</strong></div>
+                    <div><i class="fas fa-phone-alt"></i> Mo: <strong>9586242636</strong></div>
+                </div>
+                <div class="owner-detail">
+                    <div><i class="fas fa-map-marker-alt"></i> Sai Sumeru Bungalow, AA-115, GJ SH 160, near Patel Wadi, Nava Bazar, Karjan, Gujarat 391240</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand maa-logo" href="#"><span>Maa Chamunda</span> Construction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#process">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why-us">Why Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-lg-none mt-3 pt-3 border-top">
+                    <div class="text-center">
+                        <div class="fw-bold">Prajapati Darshan</div>
+                        <div class="small text-muted">Owner</div>
+                        <div class="mt-2">
+                            <a href="tel:9586242636" class="btn btn-warning btn-sm">
+                                <i class="fas fa-phone-alt me-1"></i> 9586242636
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="hero-content">
+                        <h1>Maa Chamunda Construction Excellence</h1>
+                        <p>With over 13 years of experience, we have established ourselves as one of the most trusted construction companies in Vadodara region.</p>
+                        <a href="#contact" class="btn btn-warning btn-lg">Get Free Consultation</a>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="owner-card">
+                        <h4>Contact Owner Directly</h4>
+                        <p><i class="fas fa-user-tie"></i> <strong>Prajapati Darshan</strong></p>
+                        <p><i class="fas fa-phone-alt"></i> <strong>9586242636</strong></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sai Sumeru Bungalow, AA-115, GJ SH 160</p>
+                        <p><i class="fas fa-location-dot"></i> near Patel Wadi, Nava Bazar, Karjan, Gujarat 391240</p>
+                        <a href="tel:9586242636" class="btn btn-outline-warning btn-sm mt-3">Call Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row statistics mt-5" data-aos="fade-up">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number">472+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number">13+</span>
+                        <span class="stat-label">Years</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfaction</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number">37+</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding about-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>About Maa Chamunda Construction</h2>
+                <p class="lead">Quality Construction Since 2010 - Building Trust Through Excellence</p>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Construction Site" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h3>About Maa Chamunda Construction</h3>
+                    <p>Maa Chamunda Construction, under the leadership of <strong>Prajapati Darshan</strong>, has been serving the Vadodara region with exceptional construction services since 2010. We specialize in comprehensive civil work solutions for residential, commercial, and industrial projects.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4>Quality Assurance</h4>
+                                <p>We use only the highest quality materials and adhere to strict construction standards.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h4>Timely Completion</h4>
+                                <p>We respect deadlines and ensure projects are completed within agreed timelines.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Expert Team</h4>
+                                <p>Our skilled professionals bring years of experience to every project.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h4>Trusted Partnership</h4>
+                                <p>We build lasting relationships through transparency and reliability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Construction Services</h2>
+                <p class="lead">Comprehensive construction solutions with quality workmanship</p>
+            </div>
+            
+            <div class="row">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Home Construction">
+                        </div>
+                        <div class="service-content">
+                            <h4>Home Construction</h4>
+                            <p>Complete home construction from foundation to finishing with quality materials and expert workmanship.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Road Construction">
+                        </div>
+                        <div class="service-content">
+                            <h4>Road Construction</h4>
+                            <p>Construction and repair of roads, pathways, and driveways using durable materials and modern techniques.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Renovation Work">
+                        </div>
+                        <div class="service-content">
+                            <h4>Renovation Work</h4>
+                            <p>Transform your existing space with our professional renovation and remodeling services.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Electrical Work">
+                        </div>
+                        <div class="service-content">
+                            <h4>Electrical Work</h4>
+                            <p>Professional electrical installations, repairs, and maintenance for residential and commercial properties.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80" alt="Farm House Construction">
+                        </div>
+                        <div class="service-content">
+                            <h4>Farm House Construction</h4>
+                            <p>Design and construction of beautiful, functional farm houses in serene locations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1600585154340-043788447eb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Plumbing Work">
+                        </div>
+                        <div class="service-content">
+                            <h4>Plumbing Work</h4>
+                            <p>Comprehensive plumbing solutions including installation, repair, and maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding gallery-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Project Gallery</h2>
+                <p class="lead">Showcasing our completed construction projects</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Project 1" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Residential Project</h4>
+                            <p>Modern home construction in Vadodara</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 2" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Commercial Complex</h4>
+                            <p>Office building renovation project</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80" alt="Project 3" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Farm House Project</h4>
+                            <p>Luxury farm house construction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Construction Process</h2>
+                <p class="lead">We follow a systematic approach to ensure quality and timely completion</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="process-step">
+                        <div class="process-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h4>Planning & Design</h4>
+                        <p>Detailed planning and architectural design based on client requirements</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-step">
+                        <div class="process-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h4>Foundation Work</h4>
+                        <p>Strong foundation construction with quality materials and techniques</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-step">
+                        <div class="process-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Structure Building</h4>
+                        <p>Precision construction of walls, floors, and structural elements</p>
+                        </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-step">
+                        <div class="process-icon">
+                            <i class="fas fa-paint-roller"></i>
+                        </div>
+                        <h4>Finishing Work</h4>
+                        <p>Quality finishing with plumbing, electrical, painting, and detailing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="section-padding gallery-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Why Choose Maa Chamunda Construction</h2>
+                <p class="lead">We stand out from the competition with our commitment to excellence</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>13+ Years Experience</h4>
+                        <p>Over a decade of expertise in construction and civil work projects</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Skilled Team</h4>
+                        <p>Professional engineers, architects, and construction workers</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4>Quality Materials</h4>
+                        <p>We use only certified and high-quality construction materials</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h4>Timely Delivery</h4>
+                        <p>Projects completed on schedule without compromising quality</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4>Transparent Pricing</h4>
+                        <p>Clear cost breakdown with no hidden charges or surprises</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Round-the-clock customer support and after-service assistance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Contact Us</h2>
+                <p class="lead">Get in touch for your construction needs</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="service" class="form-label">Select Service Required</label>
+                                    <select class="form-select" id="service">
+                                        <option value="home">Home Construction</option>
+                                        <option value="road">Road Construction</option>
+                                        <option value="renovation">Renovation Work</option>
+                                        <option value="electrical">Electrical Work</option>
+                                        <option value="farm">Farm House Construction</option>
+                                        <option value="plumbing">Plumbing Work</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" rows="5"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-warning btn-lg w-100">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h5>Owner</h5>
+                                <p><strong>Prajapati Darshan</strong></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Phone Number</h5>
+                                <p><strong>9586242636</strong></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Our Address</h5>
+                                <p>Sai Sumeru Bungalow, AA-115, GJ SH 160, near Patel Wadi, Nava Bazar, Karjan, Gujarat 391240</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email Address</h5>
+                                <p>info@maachamundaconstruction.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5>Working Hours</h5>
+                                <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                                <p>Sunday: 10:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-logo maa-logo">Maa Chamunda <span>Construction</span></div>
+                    <p>Building excellence in construction since 2010. We specialize in comprehensive civil work solutions for residential, commercial, and industrial projects.</p>
+                    <div class="owner-contact mb-3">
+                        <p><i class="fas fa-user-tie me-2"></i> <strong>Owner: Prajapati Darshan</strong></p>
+                        <p><i class="fas fa-phone-alt me-2"></i> <strong>9586242636</strong></p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-warning me-2"></i> Home Construction</li>
+                        <li class="mb-2"><i class="fas fa-check text-warning me-2"></i> Road Construction</li>
+                        <li class="mb-2"><i class="fas fa-check text-warning me-2"></i> Renovation Work</li>
+                        <li class="mb-2"><i class="fas fa-check text-warning me-2"></i> Electrical Work</li>
+                        <li class="mb-2"><i class="fas fa-check text-warning me-2"></i> Farm House Construction</li>
+                    </ul>
+                    <div class="mt-4">
+                        <h5 class="mb-3">Address</h5>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Sai Sumeru Bungalow, AA-115, GJ SH 160, near Patel Wadi, Nava Bazar, Karjan, Gujarat 391240</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p>&copy; 2023 Maa Chamunda Construction. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p>Designed with <i class="fas fa-heart text-warning"></i> for Construction Excellence</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img src="" alt="Project Image" class="modal-img" id="modalImage">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+        
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Image Modal
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        
+        if(imageModal) {
+            imageModal.addEventListener('show.bs.modal', function(event) {
+                const button = event.relatedTarget;
+                const imageSrc = button.getAttribute('data-img');
+                modalImage.src = imageSrc;
+            });
+        }
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+                
+                // In a real application, you would send this data to a server
+                // For demo purposes, we'll just show an alert
+                alert(`Thank you ${name}! Your message has been sent to Maa Chamunda Construction. We will contact you at ${phone} or ${email} regarding ${service} service.`);
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if(window.scrollY > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
